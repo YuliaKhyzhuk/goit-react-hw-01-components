@@ -8,3 +8,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 );
+// Test
+
+// const element = React.createElement('div', {
+//   a: 5,
+//   b: 10,
+//   children: 'Hello world',
+// });
+
+// console.log(element);
+
+// ReactDOM.render(element, document.querySelector('#root'));
