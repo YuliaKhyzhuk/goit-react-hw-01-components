@@ -1,8 +1,8 @@
-// import { ProfileList } from './ProfileList/ProfileList';
-// import user from '../user.json';
+import { ProfileList } from './ProfileList/ProfileList';
+import user from '../data/user.json';
 
 import { FriendList } from "./FriendList/FriendList";
-import friends from '../friends.json'
+import friends from '../data/friends.json';
 
 // export const App = () => {
 //   return (
@@ -13,7 +13,8 @@ import friends from '../friends.json'
 // };
 
 export const App = () => {
-  return <>
+  return (<>
+  <ProfileList user={user} />
   <FriendList friends={friends} />
-  </>;
+  </>);
 };
