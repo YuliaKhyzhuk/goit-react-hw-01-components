@@ -13,12 +13,10 @@ export const FriendList = ({ friends }) => {
   );
 };
 
-
-// FriendList.propTypes = {
-//     id: PropTypes.number.isRequired,
-// }
-// Запитання до ментора: так норм вказати id в prop-types? Чи треба деструктузизувати
-
 FriendList.propTypes = {
-    friends: PropTypes.array.isRequired,
-}
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  ),
+};
