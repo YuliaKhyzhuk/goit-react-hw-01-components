@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const FriendCard = ({ friend: { avatar, name, isOnline } }) => {
   return (
     <div>
@@ -6,4 +8,12 @@ export const FriendCard = ({ friend: { avatar, name, isOnline } }) => {
       <p className="name">{name}</p>
     </div>
   );
+};
+
+FriendCard.propTypes = {
+    friend: PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.string.isRequired,
+    }).isRequired,
 };
