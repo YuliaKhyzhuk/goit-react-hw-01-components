@@ -1,4 +1,5 @@
 // import { ProfileList } from './ProfileList/ProfileList';
+import PropTypes from 'prop-types';
 import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 import user from '../data/user.json';
 
@@ -8,21 +9,8 @@ import friends from '../data/friends.json';
 import { Statistics } from './Statistics/Statistics';
 import data from '../data/data.json';
 
-// export const App = () => {
-//   return (
-//     <>
-//       <ProfileList users={user} />
-//     </>
-//   );
-// };
-
-// export const App = () => {
-//   return (<>
-//   <ProfileList user={user} />
-//   <FriendList friends={friends} />
-//   </>);
-// };
-
+import transactions from '../data/transactions.json';
+import { Transactions } from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (<>
@@ -36,5 +24,18 @@ export const App = () => {
         likes={user.stats.likes} />
   <FriendList friends={friends} />
   <Statistics stats={data} title={"Upload stats"} />
+  <Transactions items={transactions} />
   </>);
+};
+
+user.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired
+  }).isRequired,
 };
