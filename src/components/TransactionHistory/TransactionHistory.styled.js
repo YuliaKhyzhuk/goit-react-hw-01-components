@@ -27,7 +27,6 @@ export const TransactionsContainer = styled.div`
 
 export const TransactionsTable = styled.table`
   padding: 12px;
-
   width: 100%;
   background-color: ${props => props.theme.colors.backgroundYellow};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};

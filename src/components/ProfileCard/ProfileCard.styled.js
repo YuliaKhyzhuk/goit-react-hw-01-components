@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  // font-size: 18px;
-  // font-weight: bold;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
   padding: 16px 16px 0 16px;
   margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
-
-  width: 320px;
-  //   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  width: 320px;  
   border-radius: ${props => props.theme.borderRadius.sm};
   background-color: ${props => props.theme.colors.backgroundGreen};
 

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
   font-size: 16px;
   font-weight: bold;
   padding-top: 12px;
   padding-bottom: 12px;
   margin: 0;
-  // width: 100%;
 
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
   border-radius: ${props => props.theme.borderRadius.md};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
   border: 1px solid ${props => props.theme.colors.secondary};

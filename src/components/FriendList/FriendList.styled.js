@@ -21,8 +21,6 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   padding: 16px;
- 
-  // width: 100%;
   width: 320px;
 
   border-radius: ${props => props.theme.borderRadius.sm};

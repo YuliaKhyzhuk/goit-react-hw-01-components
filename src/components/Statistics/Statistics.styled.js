@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
 export const StatisticsContainer = styled.section`
-  //   padding: 16px 16px 0 16px;
-  //   margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 320px;
-  //   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   gap: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
   border-radius: ${props => props.theme.borderRadius.sm};
   background-color: ${props => props.theme.colors.backgroundGreen};
 
@@ -47,16 +43,11 @@ export const StatisticsItem = styled.li`
   flex-basis: calc(100% / 5 - 20px);
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 
   cursor: pointer;
   padding: 10px;
-
-  // width: calc(100% / 5);
-  gap: 10px;
-  background-color: ${props => props.theme.colors.backgroundGreen};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: ${props => props.theme.colors.backgroundYellow};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
   border: 1px solid ${props => props.theme.colors.secondary};
