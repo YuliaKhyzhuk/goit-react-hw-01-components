@@ -7,7 +7,7 @@ export const Container = styled.div`
   padding-bottom: 12px;
   margin: 0;
   // width: 100%;
- 
+
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -22,14 +22,17 @@ export const Container = styled.div`
   &:hover {
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
   }
-
+  cursor: pointer;
 `;
 
 export const Status = styled.span`
   width: 20px;
   height: 20px;
   background-color: ${props => {
-    return props.isOnline ? props.theme.colors.backgroundGreen : props.theme.colors.primaryAccent}};
+    return props.isOnline
+      ? props.theme.colors.backgroundGreen
+      : props.theme.colors.primaryAccent;
+  }};
   border-radius: ${props => props.theme.borderRadius.circle};
   box-shadow: ${props => {
     return ` 0 1px 3px ${props.theme.colors.secondaryAccent}`;

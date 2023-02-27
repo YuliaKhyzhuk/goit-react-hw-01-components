@@ -21,7 +21,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   padding: 16px;
-  margin-bottom: 16px;
+ 
   // width: 100%;
   width: 320px;
 
@@ -41,5 +41,9 @@ export const ListItem = styled.li`
   }
   @media (min-width: 1280px) {
     width: 480px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
   }
 `;
