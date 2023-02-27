@@ -14,7 +14,7 @@ export const ProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  border-radius: 4px;
+  border-radius: ${props => props.theme.borderRadius.sm};
   background-color: ${props => props.theme.colors.backgroundGreen};
 
   box-shadow: ${props => {
@@ -34,11 +34,6 @@ export const ProfileContainer = styled.div`
 `;
 
 export const Description = styled.div`
-  // font-size: 18px;
-  // font-weight: bold;
-
-  //   margin-left: auto;
-  //   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +44,7 @@ export const Avatar = styled.img`
   margin-bottom: 10px;
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  border-radius: ${props => props.theme.borderRadius.circle};
   background-color: ${props => props.theme.colors.backgroundYellow};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
   border: 1px solid ${props => props.theme.colors.secondary};
@@ -60,6 +55,7 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.span`
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
 `;
@@ -74,32 +70,29 @@ export const Location = styled.span`
 `;
 
 export const StatsList = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+
+  width: 100%;
   padding: 16px;
   margin: 0;
   list-style: none;
-  //   width: 100%;
-  width: 320px;
-  height: 100%;
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
-  //   flex-grow: 1;
-  // align-items: stretch;
 `;
 
 export const StatsListItem = styled.li`
-  padding: 16px;
-  //   margin: 16px;
-  flex-basis: 30%;
-  gap: 10px;
-  background-color: ${props => props.theme.colors.backgroundGreen};
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  flex-basis: calc(100% / 3 - 20px);
+
+  padding: 16px;
   background-color: ${props => props.theme.colors.backgroundYellow};
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.secondaryAccent};
   border: 1px solid ${props => props.theme.colors.secondary};
-  border-radius: 4px;
+  border-radius: ${props => props.theme.borderRadius.sm};
 `;
 
 export const Label = styled.span`

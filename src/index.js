@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
-import './index.css';
+
 
 import { ThemeProvider } from 'styled-components';
 
@@ -18,6 +18,11 @@ const theme = {
     backgroundYellow: '#ffff66',
   },
   transition: 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)',
+  borderRadius: {
+    sm: '4px',
+    md: '5px',
+    circle: '50%',
+  },
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

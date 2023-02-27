@@ -6,7 +6,7 @@ export const List = styled.ul`
   margin-right: auto;
   width: 320px;
   list-style: none;
-    height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,8 +22,10 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   padding: 16px;
   margin-bottom: 16px;
-  width: 100%;
-  border-radius: 4px;
+  // width: 100%;
+  width: 320px;
+
+  border-radius: ${props => props.theme.borderRadius.sm};
   background-color: ${props => props.theme.colors.backgroundGreen};
 
   box-shadow: ${props => {
@@ -34,5 +36,10 @@ export const ListItem = styled.li`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-
+  @media (min-width: 768px) {
+    width: 360px;
+  }
+  @media (min-width: 1280px) {
+    width: 480px;
+  }
 `;
